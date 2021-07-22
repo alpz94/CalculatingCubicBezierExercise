@@ -29,71 +29,126 @@ namespace CalculatingCubicBezierExercise
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.screen_panel = new System.Windows.Forms.Panel();
+            this.values_panel = new System.Windows.Forms.Panel();
+            this.time_textBox = new System.Windows.Forms.TextBox();
+            this.time_label = new System.Windows.Forms.Label();
+            this.point3_Y = new System.Windows.Forms.TextBox();
+            this.point2_Y = new System.Windows.Forms.TextBox();
+            this.point1_Y = new System.Windows.Forms.TextBox();
+            this.point0_Y = new System.Windows.Forms.TextBox();
+            this.draw_button = new System.Windows.Forms.Button();
             this.point3_X = new System.Windows.Forms.TextBox();
             this.point2_X = new System.Windows.Forms.TextBox();
             this.point1_X = new System.Windows.Forms.TextBox();
             this.point0_X = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.point0_Y = new System.Windows.Forms.TextBox();
-            this.point1_Y = new System.Windows.Forms.TextBox();
-            this.point2_Y = new System.Windows.Forms.TextBox();
-            this.point3_Y = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.point1_label = new System.Windows.Forms.Label();
+            this.point3_label = new System.Windows.Forms.Label();
+            this.point2_label = new System.Windows.Forms.Label();
+            this.point0_label = new System.Windows.Forms.Label();
+            this.values_panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // screen_panel
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 214);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1461, 889);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawBezierPoint);
+            this.screen_panel.BackColor = System.Drawing.SystemColors.Control;
+            this.screen_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.screen_panel.Location = new System.Drawing.Point(0, 214);
+            this.screen_panel.Name = "screen_panel";
+            this.screen_panel.Size = new System.Drawing.Size(1894, 992);
+            this.screen_panel.TabIndex = 1;
+            this.screen_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawBezierPoint);
             // 
-            // panel1
+            // values_panel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.point3_Y);
-            this.panel1.Controls.Add(this.point2_Y);
-            this.panel1.Controls.Add(this.point1_Y);
-            this.panel1.Controls.Add(this.point0_Y);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.point3_X);
-            this.panel1.Controls.Add(this.point2_X);
-            this.panel1.Controls.Add(this.point1_X);
-            this.panel1.Controls.Add(this.point0_X);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1461, 214);
-            this.panel1.TabIndex = 0;
+            this.values_panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.values_panel.Controls.Add(this.time_textBox);
+            this.values_panel.Controls.Add(this.time_label);
+            this.values_panel.Controls.Add(this.point3_Y);
+            this.values_panel.Controls.Add(this.point2_Y);
+            this.values_panel.Controls.Add(this.point1_Y);
+            this.values_panel.Controls.Add(this.point0_Y);
+            this.values_panel.Controls.Add(this.draw_button);
+            this.values_panel.Controls.Add(this.point3_X);
+            this.values_panel.Controls.Add(this.point2_X);
+            this.values_panel.Controls.Add(this.point1_X);
+            this.values_panel.Controls.Add(this.point0_X);
+            this.values_panel.Controls.Add(this.textBox1);
+            this.values_panel.Controls.Add(this.point1_label);
+            this.values_panel.Controls.Add(this.point3_label);
+            this.values_panel.Controls.Add(this.point2_label);
+            this.values_panel.Controls.Add(this.point0_label);
+            this.values_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.values_panel.Location = new System.Drawing.Point(0, 0);
+            this.values_panel.Name = "values_panel";
+            this.values_panel.Size = new System.Drawing.Size(1894, 214);
+            this.values_panel.TabIndex = 0;
             // 
-            // button1
+            // time_textBox
             // 
-            this.button1.Location = new System.Drawing.Point(1255, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 69);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "draw";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.GetPoints);
+            this.time_textBox.Location = new System.Drawing.Point(1421, 56);
+            this.time_textBox.Name = "time_textBox";
+            this.time_textBox.Size = new System.Drawing.Size(157, 55);
+            this.time_textBox.TabIndex = 15;
+            this.time_textBox.Text = "0.01";
+            // 
+            // time_label
+            // 
+            this.time_label.AutoSize = true;
+            this.time_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.time_label.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.time_label.Location = new System.Drawing.Point(1275, 46);
+            this.time_label.Name = "time_label";
+            this.time_label.Size = new System.Drawing.Size(140, 65);
+            this.time_label.TabIndex = 14;
+            this.time_label.Text = "Time";
+            // 
+            // point3_Y
+            // 
+            this.point3_Y.Location = new System.Drawing.Point(1078, 107);
+            this.point3_Y.Name = "point3_Y";
+            this.point3_Y.Size = new System.Drawing.Size(119, 55);
+            this.point3_Y.TabIndex = 13;
+            this.point3_Y.Text = "100";
+            // 
+            // point2_Y
+            // 
+            this.point2_Y.Location = new System.Drawing.Point(765, 107);
+            this.point2_Y.Name = "point2_Y";
+            this.point2_Y.Size = new System.Drawing.Size(119, 55);
+            this.point2_Y.TabIndex = 12;
+            this.point2_Y.Text = "50";
+            // 
+            // point1_Y
+            // 
+            this.point1_Y.Location = new System.Drawing.Point(468, 107);
+            this.point1_Y.Name = "point1_Y";
+            this.point1_Y.Size = new System.Drawing.Size(119, 55);
+            this.point1_Y.TabIndex = 11;
+            this.point1_Y.Text = "10";
+            // 
+            // point0_Y
+            // 
+            this.point0_Y.Location = new System.Drawing.Point(176, 107);
+            this.point0_Y.Name = "point0_Y";
+            this.point0_Y.Size = new System.Drawing.Size(119, 55);
+            this.point0_Y.TabIndex = 10;
+            this.point0_Y.Text = "100";
+            // 
+            // draw_button
+            // 
+            this.draw_button.Location = new System.Drawing.Point(1618, 56);
+            this.draw_button.Name = "draw_button";
+            this.draw_button.Size = new System.Drawing.Size(179, 106);
+            this.draw_button.TabIndex = 9;
+            this.draw_button.Text = "draw";
+            this.draw_button.UseVisualStyleBackColor = true;
+            this.draw_button.Click += new System.EventHandler(this.GetPoints);
             // 
             // point3_X
             // 
-            this.point3_X.Location = new System.Drawing.Point(1090, 46);
+            this.point3_X.Location = new System.Drawing.Point(1078, 46);
             this.point3_X.Name = "point3_X";
             this.point3_X.Size = new System.Drawing.Size(119, 55);
             this.point3_X.TabIndex = 8;
@@ -131,114 +186,84 @@ namespace CalculatingCubicBezierExercise
             this.textBox1.Size = new System.Drawing.Size(242, 55);
             this.textBox1.TabIndex = 4;
             // 
-            // label4
+            // point1_label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(358, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 65);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Pt1";
+            this.point1_label.AutoSize = true;
+            this.point1_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.point1_label.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.point1_label.Location = new System.Drawing.Point(358, 46);
+            this.point1_label.Name = "point1_label";
+            this.point1_label.Size = new System.Drawing.Size(104, 65);
+            this.point1_label.TabIndex = 3;
+            this.point1_label.Text = "Pt1";
             // 
-            // label3
+            // point3_label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(980, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 65);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Pt3";
+            this.point3_label.AutoSize = true;
+            this.point3_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.point3_label.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.point3_label.Location = new System.Drawing.Point(968, 46);
+            this.point3_label.Name = "point3_label";
+            this.point3_label.Size = new System.Drawing.Size(104, 65);
+            this.point3_label.TabIndex = 2;
+            this.point3_label.Text = "Pt3";
             // 
-            // label2
+            // point2_label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(674, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 65);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "P2";
+            this.point2_label.AutoSize = true;
+            this.point2_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.point2_label.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.point2_label.Location = new System.Drawing.Point(655, 46);
+            this.point2_label.Name = "point2_label";
+            this.point2_label.Size = new System.Drawing.Size(104, 65);
+            this.point2_label.TabIndex = 1;
+            this.point2_label.Text = "Pt2";
             // 
-            // label1
+            // point0_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(66, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 65);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pt0";
+            this.point0_label.AutoSize = true;
+            this.point0_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.point0_label.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.point0_label.Location = new System.Drawing.Point(66, 46);
+            this.point0_label.Name = "point0_label";
+            this.point0_label.Size = new System.Drawing.Size(104, 65);
+            this.point0_label.TabIndex = 0;
+            this.point0_label.Text = "Pt0";
             // 
-            // point0_Y
-            // 
-            this.point0_Y.Location = new System.Drawing.Point(176, 107);
-            this.point0_Y.Name = "point0_Y";
-            this.point0_Y.Size = new System.Drawing.Size(119, 55);
-            this.point0_Y.TabIndex = 10;
-            this.point0_Y.Text = "100";
-            // 
-            // point1_Y
-            // 
-            this.point1_Y.Location = new System.Drawing.Point(468, 107);
-            this.point1_Y.Name = "point1_Y";
-            this.point1_Y.Size = new System.Drawing.Size(119, 55);
-            this.point1_Y.TabIndex = 11;
-            this.point1_Y.Text = "10";
-            // 
-            // point2_Y
-            // 
-            this.point2_Y.Location = new System.Drawing.Point(765, 107);
-            this.point2_Y.Name = "point2_Y";
-            this.point2_Y.Size = new System.Drawing.Size(119, 55);
-            this.point2_Y.TabIndex = 12;
-            this.point2_Y.Text = "50";
-            // 
-            // point3_Y
-            // 
-            this.point3_Y.Location = new System.Drawing.Point(1090, 107);
-            this.point3_Y.Name = "point3_Y";
-            this.point3_Y.Size = new System.Drawing.Size(119, 55);
-            this.point3_Y.TabIndex = 13;
-            this.point3_Y.Text = "100";
-            // 
-            // Form1
+            // BezierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1461, 1103);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(1894, 1206);
+            this.Controls.Add(this.screen_panel);
+            this.Controls.Add(this.values_panel);
+            this.Name = "BezierForm";
             this.Text = "Cubic Bezier";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.values_panel.ResumeLayout(false);
+            this.values_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel values_panel;
         private System.Windows.Forms.TextBox point3_X;
         private System.Windows.Forms.TextBox point2_X;
         private System.Windows.Forms.TextBox point1_X;
         private System.Windows.Forms.TextBox point0_X;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label point1_label;
+        private System.Windows.Forms.Label point3_label;
+        private System.Windows.Forms.Label point2_label;
+        private System.Windows.Forms.Label point0_label;
+        private System.Windows.Forms.Button draw_button;
         private System.Windows.Forms.TextBox point3_Y;
         private System.Windows.Forms.TextBox point2_Y;
         private System.Windows.Forms.TextBox point1_Y;
         private System.Windows.Forms.TextBox point0_Y;
+        private System.Windows.Forms.TextBox time_textBox;
+        private System.Windows.Forms.Label time_label;
+        private System.Windows.Forms.Panel screen_panel;
     }
 }
 
